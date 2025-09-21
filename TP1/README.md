@@ -1,8 +1,8 @@
 ﻿# TP1 — Título do Trabalho
 
 ## Autor
-- **Nome:** Rafael Ferreira
-- **ID:** Axxxxx
+- **Nome:** Cláudio Ferreira
+- **ID:** A108577
 - **Foto:** ![Minha Foto](../foto.jpg)
 
 ## Resumo
