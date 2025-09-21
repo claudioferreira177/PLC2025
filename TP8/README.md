@@ -1,4 +1,4 @@
-# TPX — Título do Trabalho
+# TP8 — Título do Trabalho
 
 ## Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
