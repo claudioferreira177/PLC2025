@@ -1,0 +1,11 @@
+﻿*.o
+*.obj
+*.exe
+*.out
+*.class
+*.jar
+__pycache__/
+*.pyc
+build/
+dist/
+target/
