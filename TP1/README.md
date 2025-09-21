@@ -2,7 +2,7 @@
 
 ## Autor
 
-<img src="../img/perfil.jpg" alt="Minha Foto" width="120" align="left">
+- **Foto:** <img src="../img/perfil.jpg" alt="Minha Foto" width="120" align="left" />
 
 - **Nome:** Cláudio Ferreira  
 - **ID:** A108577  
