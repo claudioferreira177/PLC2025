@@ -1,4 +1,4 @@
-# TP1 — Título do Trabalho
+# TP1 — Strings binárias **sem** a substring `011`
 
 ## Autor
 
@@ -11,14 +11,17 @@
 
 ---
 
-## Resumo  
-
-Breve descrição do problema, abordagem e decisões.
+## Resumo
+- Pretende-se definir uma expressão regular que aceite todas as strings binárias (0/1) **que não contêm** a substring `011`.
+- Regex proposta: ^1*(?:0(?:0|10)*(?:1)?)?$
+- Verificação feita com testes positivos/negativos e no regex101.
 
 ---
 
-## Resultados  
-
-- [ficheiro1.ext](ficheiro1.ext)  
-- [ficheiro2.ext](ficheiro2.ext)  
+## Resultados
+- **Regex:** [`regex.txt`](./regex.txt)
+- **Como testar no regex101:** [`regex101.md`](./regex101.md)
+- **Casos de teste:** [`tests.txt`](./tests.txt)
+- **Prova/Explicação:** [`PROVA.md`](./PROVA.md)
+- **DFA (Graphviz, opcional):** [`dfa.dot`](./dfa.dot)  
 
