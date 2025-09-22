@@ -40,7 +40,7 @@ Linguagem de todas as strings binárias em {0,1}* que **não** contêm a substri
 - 1, 1111111  
 - 000001  
 - 1111010101000  
-- 0, 00, 010, 1010, 1001, 101010  
+- 0, 00, 010, 1010, 1001, 01010 
 
 ❌ **Rejeitados:**  
 - 011  
