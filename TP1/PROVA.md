@@ -21,6 +21,7 @@ Linguagem de todas as strings binárias em {0,1}* que **não** contêm a substri
 
 🔹 **Regex final**:  
 ```regex
+```
 ^1*(?:0(?:0|10)*(?:1)?)?$
 
 ## Prova de Correção
