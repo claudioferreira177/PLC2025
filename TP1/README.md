@@ -13,7 +13,10 @@
 
 ## Resumo
 - Pretende-se definir uma expressão regular que aceite todas as strings binárias (0/1) **que não contêm** a substring `011`.
-- Regex proposta: ^1*(?:0(?:0|10)*(?:1)?)?$
+- Regex proposta: 
+
+```regex
+^1*(?:0(?:0|10)*(?:1)?)?$
 - Verificação feita com testes positivos/negativos e no regex101.
 
 ---
