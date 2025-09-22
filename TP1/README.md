@@ -16,7 +16,7 @@
 - Regex proposta: 
 
 ```regex
-^1*(?:0(?:0|10)*(?:1)?)?$
+^1*(?:0(?:0|10)*(?:1)?)?$´´´
 - Verificação feita com testes positivos/negativos e no regex101.
 
 ---
