@@ -16,7 +16,7 @@ Linguagem de todas as strings em `{0,1}*` que **não têm** a substring `011`.
 Juntando tudo, com âncoras para casar a **linha inteira**: ^1*(?:0(?:0|10)*(?:1)?)?$
 
 
-## Sanidade (aceites/rejeitados)
+## Aceites/Rejeitados
 Aceites: `""` (vazia), `1`, `111`, `0`, `00`, `001`, `01`, `010`, `1010`, `1001`, `101010`.  
 Rejeitados: `011`, `1011`, `0011`, `11011`, `000011`, `101011`.
 
