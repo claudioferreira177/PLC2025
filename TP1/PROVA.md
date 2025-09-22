@@ -20,15 +20,3 @@ Juntando tudo: ^1*(?:0(?:0|10)*(?:1)?)?$
 Aceites: `""` (vazia), `1`, `111`, `0`, `00`, `001`, `01`, `010`, `1010`, `1001`, `101010`.  
 Rejeitados: `011`, `1011`, `0011`, `11011`, `000011`, `101011`.
 
-## DFA mínimo
-Estados = maior sufixo da entrada que é também prefixo de `011`:
-- `q0` (ε), `q1` (`0`), `q2` (`01`), `q3` (dead/erro — já vimos `011`).
-Transições:
-- `q0 --0--> q1`, `q0 --1--> q0`
-- `q1 --0--> q1`, `q1 --1--> q2`
-- `q2 --0--> q1`, `q2 --1--> q3`
-- `q3 --0/1--> q3`
-Aceites: `q0, q1, q2`. Rejeita: `q3`.
-
-Ficheiro DOT: [`dfa.dot`](./dfa.dot).
-
