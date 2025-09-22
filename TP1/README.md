@@ -12,13 +12,13 @@
 ---
 
 ## Resumo
-- Pretende-se definir uma expressão regular que aceite todas as strings binárias (0/1) **que não contêm** a substring `011`.
+- O objetivo deste trabalho é definir uma **expressão regular** que aceite todas as strings binárias `{0,1}*` que **não contenham a substring `011`**.  
 - Regex proposta: 
 
 ```regex
 ^1*(?:0(?:0|10)*(?:1)?)?$
 ```
-- Verificação feita com testes positivos/negativos e no regex101.
+- A verificação foi feita com: Testes positivos e negativos preparados em tests.txt | Simulações no regex101
 
 ---
 
@@ -27,5 +27,5 @@
 - **Como testar no regex101:** [`regex101.md`](./regex101.md)
 - **Casos de teste:** [`tests.txt`](./tests.txt)
 - **Prova/Explicação:** [`PROVA.md`](./PROVA.md)
-- **DFA:** [`dfa.dot`](./dfa.dot)  
+  
 
