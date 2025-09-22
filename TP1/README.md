@@ -23,9 +23,9 @@
 ---
 
 ## Resultados
-- **Regex:** [`regex.txt`](./regex.txt)
-- **Como testar no regex101:** [`regex101.md`](./regex101.md)
-- **Casos de teste:** [`tests.txt`](./tests.txt)
-- **Prova/Explicação:** [`PROVA.md`](./PROVA.md)
+- [`regex.txt`](./regex.txt) -> Contém apenas a expressão regular final.
+- [`regex101.md`](./regex101.md) -> Demonstração da regex no site regex101 (com print).
+- [`tests.txt`](./tests.txt) -> Strings válidas e inválidas para validar a regex.
+- [`PROVA.md`](./PROVA.md) -> Explicação detalhada da construção e prova da correção.
   
 
