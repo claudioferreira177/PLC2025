@@ -12,9 +12,7 @@
 https://regex101.com/r/TWf6hg/1
 ```
 
-# Testes no regex101
-
-A expressão foi validada no regex101 com um conjunto de strings válidas e inválidas.
+**Print do teste:**
 
 ![Testes no regex101](./regex101.png)
 
