@@ -13,7 +13,7 @@ Linguagem de todas as strings em `{0,1}*` que **não têm** a substring `011`.
   - Portanto, depois do primeiro `0`: `0 (0|10)* 1?`
 - Antes desse primeiro `0` podemos ter qualquer número de `1`’s: `1*`.
 
-Juntando tudo, com âncoras para casar a **linha inteira**: ^1*(?:0(?:0|10)*(?:1)?)?$
+Juntando tudo: ^1*(?:0(?:0|10)*(?:1)?)?$
 
 
 ## Aceites/Rejeitados
