@@ -23,5 +23,5 @@
 - **Como testar no regex101:** [`regex101.md`](./regex101.md)
 - **Casos de teste:** [`tests.txt`](./tests.txt)
 - **Prova/Explicação:** [`PROVA.md`](./PROVA.md)
-- **DFA (Graphviz, opcional):** [`dfa.dot`](./dfa.dot)  
+- **DFA:** [`dfa.dot`](./dfa.dot)  
 
