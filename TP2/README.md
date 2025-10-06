@@ -1,6 +1,6 @@
-# TP2 — Título do Trabalho
+# 🧩 TP2 — Conversor de Markdown para HTML
 
-## Autor
+## 👨‍💻 Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
 
 - **Nome:** Cláudio Ferreira  
