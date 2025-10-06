@@ -21,8 +21,6 @@ import sys
 from pathlib import Path
 
 
-# ---------- helpers de inline (ordem importa) ----------
-
 IMG_RE   = re.compile(r'!\[([^\]]+)\]\(([^)]+)\)')              # ![alt](url)
 LINK_RE  = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')               # [texto](url)
 BOLD_RE  = re.compile(r'\*\*([^\*]+)\*\*')                      # **texto**
@@ -40,8 +38,6 @@ def render_inline(text: str) -> str:
     text = ITAL_RE.sub(r'<i>\1</i>', text)
     return text
 
-
-# ---------- linhas em bloco ----------
 
 HDR_RE = re.compile(r'^(#{1,3})\s+(.*)$')            # #, ##, ### cabeçalhos
 OLI_RE = re.compile(r'^\s*\d+\.\s+(.*)$')            # 1. Item
@@ -94,8 +90,6 @@ def md_to_html(lines):
     return html
 
 
-# ---------- CLI ----------
-
 def main():
     if len(sys.argv) != 2:
         print("Uso: python3 md2html.py <ficheiro.md>", file=sys.stderr)
@@ -110,7 +104,6 @@ def main():
         lines = f.readlines()
 
     html_lines = md_to_html(lines)
-    # opcional: embrulhar num HTML mínimo
     print("<!DOCTYPE html>")
     print("<html lang='pt'>")
     print("<meta charset='utf-8'/>")
