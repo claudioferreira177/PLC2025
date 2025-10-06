@@ -1,6 +1,4 @@
 # Exemplo
-## texto
-### texto
 
 Este é um **exemplo** ...
 
@@ -12,5 +10,5 @@ Este é um *exemplo* ...
 
 Como pode ser consultado em [página da UC](http://www.uc.pt)
 
-Como se vê na imagem seguinte: ![imagem dum coelho](http://www.coellho.com)
+Como se vê na imagem seguinte: ![imagem dum coelho](http://www.coellho.com) ...
 
