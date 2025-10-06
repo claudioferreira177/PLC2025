@@ -8,4 +8,4 @@
 
 Link: [página da UC](http://www.uc.pt)
 
-Imagem: ![coelho](http://www.coellho.com/coelho.png)
+Imagem: 
