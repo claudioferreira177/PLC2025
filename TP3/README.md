@@ -1,4 +1,6 @@
-# TP3 — Título do Trabalho
+# TP3 — Analisador Léxico (tipo SPARQL)
+
+[![TP3 tests](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp3-tests.yml/badge.svg)](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp3-tests.yml)
 
 ## Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
