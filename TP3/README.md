@@ -57,7 +57,7 @@ TP3/
 
 ## ▶️ Execução
 
-## Windows (PowerShell)
+### Windows (PowerShell)
 
 cd TP3
 python -m venv .venv
@@ -67,7 +67,7 @@ python -m pip install -r requirements.txt
 # correr no exemplo do enunciado
 python -m src.main tests\inputs\exemplo1.sparql
 
-## Linux/macOS
+### Linux/macOS
 
 cd TP3
 python3 -m pip install -r requirements.txt
