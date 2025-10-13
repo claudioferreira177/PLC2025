@@ -52,3 +52,62 @@ TP3/
   test.sh         # runner de testes (bash / Unix)
   requirements.txt
 
+---
+
+## ▶️ Execução
+
+## Windows (PowerShell)
+
+cd TP3
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+
+# correr no exemplo do enunciado
+python -m src.main tests\inputs\exemplo1.sparql
+
+## Linux/macOS
+
+cd TP3
+python3 -m pip install -r requirements.txt
+./run.sh tests/inputs/exemplo1.sparql
+
+**Formato da saída:**
+• Para palavras-chave e pontuação, imprime-se só o TIPO (ex.: SELECT, DOT).
+• Para os restantes, imprime-se TIPO VALOR (ex.: VAR ?nome, QNAME foaf:name, STRING A "quote"\n\tline 
+
+## 🧪 Testes
+
+exemplo1.sparql — query do enunciado (DBPedia/Chuck Berry)
+
+exemplo2.sparql — strings com escapes e langtag @pt-PT
+
+exemplo3.sparql — STAR (*) e parênteses (...)
+
+Correr todos os testes
+
+Windows
+
+cd TP3
+.\test.ps1
+
+Linux/macOS
+
+cd TP3
+bash ./test.sh
+
+Saída esperada:
+
+[OK]   exemplo1
+[OK]   exemplo2
+[OK]   exemplo3
+
+## 🔎 Notas de Implementação
+
+lexer.py usa o PLY; palavras-chave com (?i:...) para case-insensitive.
+
+t_STRING normaliza os escapes para o valor Python, e o main.py volta a escapá-los ao imprimir (\n → \\n, etc.) para outputs estáveis em teste.
+
+Regra t_BOM para ignorar \ufeff no início de ficheiros (quando gravados em UTF-8 com BOM).
+
+Para palavras-chave e pontuação imprime-se apenas o tipo; para VAR, QNAME, STRING, LANGTAG, INT imprime-se tipo + valor.
