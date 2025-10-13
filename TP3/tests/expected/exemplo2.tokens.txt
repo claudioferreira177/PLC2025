@@ -1,0 +1,11 @@
+﻿SELECT
+VAR ?x
+WHERE
+LBRACE
+VAR ?x
+QNAME foaf:name
+STRING A "quote"\n\tline
+LANGTAG @pt-PT
+RBRACE
+LIMIT
+INT 0

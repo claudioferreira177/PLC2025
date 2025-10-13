@@ -9,3 +9,6 @@ __pycache__/
 build/
 dist/
 target/
+
+TP3/tests/out/
+

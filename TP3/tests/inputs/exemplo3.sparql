@@ -1,0 +1,4 @@
+﻿# estrela e parênteses
+select * where {
+  (?s ?p ?o) .
+} limit 3
