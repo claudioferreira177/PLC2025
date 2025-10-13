@@ -50,7 +50,7 @@ TP3/
   run.sh          # atalho para Linux/macOS
   test.ps1        # runner de testes (PowerShell / Windows)
   test.sh         # runner de testes (bash / Unix)
-  requirements.txt
+  requirements.txt```
 
 ---
 
