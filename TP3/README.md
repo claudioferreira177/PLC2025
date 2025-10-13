@@ -75,9 +75,9 @@ python3 -m pip install -r requirements.txt
 ./run.sh tests/inputs/exemplo1.sparql
 ```
 
-**Formato da saída:**
-- Para palavras-chave e pontuação, imprime-se só o TIPO (ex.: SELECT, DOT).
-- Para os restantes, imprime-se TIPO VALOR (ex.: VAR ?nome, QNAME foaf:name, STRING A "quote"\n\tline)
+**Formato da saída**
+- Para **palavras-chave** e **pontuação**, imprime-se só o **TIPO** (ex.: `SELECT`, `DOT`).
+- Para os restantes, imprime-se **TIPO VALOR** (ex.: `VAR ?nome`, `QNAME foaf:name`, `STRING A "quote"\n\tline`).
 
 ## 🧪 Testes
 - `exemplo1.sparql` — query do enunciado (DBPedia/Chuck Berry)
