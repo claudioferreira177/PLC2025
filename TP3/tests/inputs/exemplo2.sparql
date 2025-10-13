@@ -1,0 +1,4 @@
+﻿# strings com escapes e langtag
+select ?x where {
+  ?x foaf:name "A \"quote\"\n\tline"@pt-PT
+} limit 0

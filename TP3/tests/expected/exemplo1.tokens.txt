@@ -1,28 +1,28 @@
 ﻿SELECT
-VAR    ?nome
-VAR    ?desc
+VAR ?nome
+VAR ?desc
 WHERE
 LBRACE
-VAR    ?s
+VAR ?s
 A
-QNAME  dbo:MusicalArtist
-DOT    .
-VAR    ?s
-QNAME  foaf:name
+QNAME dbo:MusicalArtist
+DOT
+VAR ?s
+QNAME foaf:name
 STRING Chuck Berry
 LANGTAG @en
-DOT    .
-VAR    ?w
-QNAME  dbo:artist
-VAR    ?s
-DOT    .
-VAR    ?w
-QNAME  foaf:name
-VAR    ?nome
-DOT    .
-VAR    ?w
-QNAME  dbo:abstract
-VAR    ?desc
+DOT
+VAR ?w
+QNAME dbo:artist
+VAR ?s
+DOT
+VAR ?w
+QNAME foaf:name
+VAR ?nome
+DOT
+VAR ?w
+QNAME dbo:abstract
+VAR ?desc
 RBRACE
 LIMIT
-INT    1000
+INT 1000

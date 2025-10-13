@@ -1,15 +1,29 @@
 ﻿import sys
 from .lexer import build_lexer
 
+TYPES_ONLY = {
+    "SELECT","WHERE","LIMIT","A",
+    "LBRACE","RBRACE","LPAREN","RPAREN","DOT","SEMI","COMMA","STAR",
+}
+
+def _show(v):
+    if not isinstance(v, str):
+        return v
+    return (
+        v.replace("\\", "\\\\")
+         .replace("\r", "\\r")
+         .replace("\n", "\\n")
+         .replace("\t", "\\t")
+    )
+
 def tokenize(text: str):
     lex = build_lexer()
     lex.input(text)
-    toks = []
     while True:
         tok = lex.token()
-        if not tok: break
-        toks.append((tok.type, tok.value))
-    return toks
+        if not tok:
+            break
+        yield tok.type, tok.value
 
 def main():
     if len(sys.argv) < 2:
@@ -19,8 +33,9 @@ def main():
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
     for ttype, tval in tokenize(text):
-        shown = tval.replace("\n","\\n") if isinstance(tval,str) else tval
-        print(f"{ttype}\t{shown}")
-
+        if ttype in TYPES_ONLY:
+            print(ttype)
+        else:
+            print(f"{ttype} {_show(tval)}")   # <— espaço simples
 if __name__ == "__main__":
     main()
