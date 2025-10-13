@@ -2,7 +2,7 @@
 
 [![TP3 tests](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp3-tests.yml/badge.svg)](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp3-tests.yml)
 
-## Autor
+## 👤 Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
 
 - **Nome:** Cláudio Ferreira  
