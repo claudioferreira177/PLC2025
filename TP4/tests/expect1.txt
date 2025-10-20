@@ -1,0 +1,4 @@
+Saldo = 1e30c
+Pode retirar o produto dispensado "água 0.5L"
+Pode retirar o troco: 1x 50c e 1x 10c.
+Até à próxima
