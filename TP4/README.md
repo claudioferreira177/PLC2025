@@ -1,5 +1,7 @@
 # TP4 — Máquina de Vending
 
+[![TP4 tests](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp4-tests.yml/badge.svg)](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp4-tests.yml)
+
 ## Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
 
