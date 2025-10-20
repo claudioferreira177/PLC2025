@@ -45,7 +45,7 @@ python -m vending.main
 
 ## Sessão de exemplo
 ```text
-maq: 2025-10-19, Stock carregado, Estado atualizado.
+maq: <AAAA-MM-DD>, Stock carregado, Estado atualizado.
 maq: Bom dia. Estou disponível para atender o seu pedido.
 >> LISTAR
 maq:
@@ -69,10 +69,12 @@ maq: Até à próxima
 ## Notas
 
 - **Moedas e valores:** trabalhamos sempre em **cêntimos** (inteiros). Exemplos: `130 -> 1e30c`, `60 -> 60c`.
-- **Comando `MOEDA`:** aceita `1e`, `20c`, `2e 50c`, `0.7` ou `0,7` (vírgulas/; opcionais).
+- **Comando `MOEDA`:** aceita `1e`, `20c`, `2e 50c`, `0.7` ou `0,7` (**vírgulas ou ponto e vírgula** como separadores; **espaços opcionais**).
 - **Troco:** cálculo guloso com moedas euro padrão; saída legível (ex.: `1x 50c e 1x 10c`).
 - **Comandos principais:** `LISTAR`, `MOEDA <...>`, `SELECIONAR <CÓDIGO>`, `SAIR`.  
   *(Opcional)* `ADICIONAR COD;NOME;QUANT;PRECO` para repor/introduzir artigos.
 - **Persistência:** `stock.json` é carregado no arranque e gravado ao **SAIR**.
 - **Mensagens:** respostas da máquina começam por `maq:`; erros comuns tratados (formato de moeda, produto inexistente/esgotado, saldo insuficiente).
 - **Compatibilidade:** Python 3.11+, funciona em Windows/Linux/macOS sem dependências externas.
+- **Atalhos de saída:** `Ctrl+C` ou `Ctrl+D` (EOF) também terminam a sessão — a máquina responde como se fosse `SAIR`.
+
