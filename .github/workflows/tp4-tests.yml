@@ -19,8 +19,12 @@ jobs:
           cd TP4
           python -m pip install -r requirements.txt
       - name: Run tests (PowerShell)
+        shell: pwsh
         run: |
           cd TP4
+          $env:PYTHONIOENCODING = 'utf-8'
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.Encoding]::UTF8
           ./test.ps1
 
   test-ubuntu:
