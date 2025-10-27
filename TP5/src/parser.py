@@ -1,12 +1,13 @@
 import ply.yacc as yacc
 from .lexer import tokens, build_lexer
 
-# Precedências/associatividade
+# Precedências/associatividade: da mais baixa (em cima) para a mais alta (em baixo)
 precedence = (
-    ('right', 'UMINUS'),
     ('left', 'PLUS', 'MINUS'),
     ('left', 'TIMES', 'DIVIDE'),
+    ('right', 'UMINUS'),
 )
+
 
 class Parser:
     def __init__(self):
