@@ -1,7 +1,5 @@
 # TP5 — Analisador Léxico e Sintático (Expressões)
 
-[![TP5 tests](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp5-tests.yml/badge.svg)](https://github.com/claudioferreira177/PLC2025/actions/workflows/tp5-tests.yml)
-
 ## Autor
 <img src="../img/perfil.jpg" alt="Foto de perfil" width="100" align="left">
 
