@@ -6,8 +6,11 @@ New-Item -ItemType Directory -Force -Path "out" | Out-Null
 
 function Run-Case($in, $exp, $tag) {
   $out = "out/$tag.out.txt"
-  # Capturar stdout + stderr e ignorar exit code do Python
+  # Capturar stdout + stderr; ignorar exit code do Python
   & $Python -m src.main $in 2>&1 | Set-Content -Encoding utf8 $out
+  # MUITO IMPORTANTE: evitar que o exit code do Python "vaze" para o passo do CI
+  $global:LASTEXITCODE = 0
+
   $expected = Get-Content $exp
   $fail = $false
   foreach ($line in $expected) {
@@ -23,3 +26,7 @@ Run-Case "tests/inputs/ok1.txt"     "tests/expected/ok1.out.txt"     "ok1"
 Run-Case "tests/inputs/ok2.txt"     "tests/expected/ok2.out.txt"     "ok2"
 Run-Case "tests/inputs/err_lex.txt" "tests/expected/err_lex.out.txt" "err_lex"
 Run-Case "tests/inputs/err_syn.txt" "tests/expected/err_syn.out.txt" "err_syn"
+
+# Se chegou aqui, todos os testes passaram
+exit 0
+
