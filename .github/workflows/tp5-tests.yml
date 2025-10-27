@@ -1,0 +1,45 @@
+name: TP5 tests
+
+on:
+  push:
+    paths: ["TP5/**", ".github/workflows/tp5-tests.yml"]
+  pull_request:
+    paths: ["TP5/**", ".github/workflows/tp5-tests.yml"]
+
+jobs:
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          cd TP5
+          python -m pip install -r requirements.txt
+      - name: Run tests (PowerShell)
+        shell: pwsh
+        run: |
+          cd TP5
+          $env:PYTHONIOENCODING = 'utf-8'
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.Encoding]::UTF8
+          ./test.ps1
+
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          cd TP5
+          python3 -m pip install -r requirements.txt
+          chmod +x test.sh
+      - name: Run tests (Bash)
+        run: |
+          cd TP5
+          ./test.sh
