@@ -6,7 +6,8 @@ New-Item -ItemType Directory -Force -Path "out" | Out-Null
 
 function Run-Case($in, $exp, $tag) {
   $out = "out/$tag.out.txt"
-  & $Python -m src.main $in | Set-Content -Encoding utf8 $out
+  # Capturar stdout + stderr e ignorar exit code do Python
+  & $Python -m src.main $in 2>&1 | Set-Content -Encoding utf8 $out
   $expected = Get-Content $exp
   $fail = $false
   foreach ($line in $expected) {
