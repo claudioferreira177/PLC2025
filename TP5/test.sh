@@ -5,7 +5,7 @@ mkdir -p out
 
 run_case () {
   local in="$1" exp="$2" tag="$3"
-  python3 -m src.main "$in" > "out/$tag.out.txt"
+  python3 -m src.main "$in" > "out/$tag.out.txt" || true
   local ok=1
   while IFS= read -r line; do
     if ! grep -Fq -- "$line" "out/$tag.out.txt"; then
