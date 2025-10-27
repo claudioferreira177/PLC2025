@@ -1,0 +1,2 @@
+TOKENS:
+PARSE: OK → valor = -6
