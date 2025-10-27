@@ -1,1 +1,2 @@
-expected/ok1.out.txt
+TOKENS:
+PARSE: OK → valor = 11
