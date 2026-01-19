@@ -414,8 +414,7 @@
 
     
     \hypertarget{processamento-de-linguagens-e-compiladores---trabalho-pruxe1tico}{%
-\section{Processamento de Linguagens e Compiladores - Trabalho
-Prático}\label{processamento-de-linguagens-e-compiladores---trabalho-pruxe1tico}}
+\section*{Processamento de Linguagens e Compiladores - Trabalho Prático}\label{processamento-de-linguagens-e-compiladores---trabalho-pruxe1tico}}
 
 \textbf{Autores.} - \emph{Cláudio Rafael Oliveira Ferreira} (A108577) -
 \emph{Marco António Ferreira Abreu} (A108578) - \emph{Nelson Daniel
@@ -429,7 +428,7 @@ Geração de Código 6) Testes e Resultados 7) Conclusão e Dificuldades
 Superadas
 
     \hypertarget{introduuxe7uxe3o-e-arquitetura-do-sistema}{%
-\section{1. Introdução e Arquitetura do
+\section{ Introdução e Arquitetura do
 Sistema}\label{introduuxe7uxe3o-e-arquitetura-do-sistema}}
 
 O objetivo deste projeto é o desenvolvimento de um compilador robusto
@@ -439,7 +438,7 @@ de baixo nível, especificamente para o conjunto de instruções da
 \textbf{Máquina Virtual (VM)} de stack disponibilizada.
 
 \hypertarget{metodologia-de-desenvolvimento}{%
-\subsection{1.1. Metodologia de
+\subsection{ Metodologia de
 Desenvolvimento}\label{metodologia-de-desenvolvimento}}
 
 A implementação baseia-se num pipeline de múltiplas passagens
@@ -449,7 +448,7 @@ permite que cada fase do compilador valide a integridade dos dados antes
 de os passar à etapa seguinte.
 
 \hypertarget{estrutura-modular-e-organizauxe7uxe3o}{%
-\subsection{1.2. Estrutura Modular e
+\subsection{ Estrutura Modular e
 Organização}\label{estrutura-modular-e-organizauxe7uxe3o}}
 
 O projeto foi organizado de forma estrita para garantir escalabilidade e
@@ -498,7 +497,7 @@ organização:
 \end{itemize}
 
 \hypertarget{fluxo-de-trabalho-pipeline}{%
-\subsection{1.3. Fluxo de Trabalho
+\subsection{ Fluxo de Trabalho
 (Pipeline)}\label{fluxo-de-trabalho-pipeline}}
 
 O processo de compilação segue um fluxo sequencial e rigoroso: 1)
@@ -516,7 +515,7 @@ mensagem de erro informativa (ex: \textbf{SemanticError} ou
 \textbf{SyntaxParseError}) que indica a linha e a causa do problema.
 
     \hypertarget{anuxe1lise-luxe9xica-srcpascal_analex.py}{%
-\section{2. Análise Léxica
+\section{ Análise Léxica
 (src/pascal\_analex.py)}\label{anuxe1lise-luxe9xica-srcpascal_analex.py}}
 
 A análise léxica é a primeira etapa do processo de compilação. O seu
@@ -524,7 +523,7 @@ objetivo é ler o fluxo de caracteres do código-fonte e agrupá-los em
 unidades significativas chamadas \textbf{tokens}.
 
 \hypertarget{ferramentas-e-configurauxe7uxe3o}{%
-\subsection{2.1. Ferramentas e
+\subsection{ Ferramentas e
 Configuração}\label{ferramentas-e-configurauxe7uxe3o}}
 
 Para esta fase, utilizámos a biblioteca \textbf{ply.lex}. A configuração
@@ -535,7 +534,7 @@ a identificadores e palavras reservadas, respeitando a especificação do
 Pascal Standard (Ver: \textbf{src/pascal\_analex.py}).
 
 \hypertarget{gestuxe3o-de-palavras-reservadas}{%
-\subsection{2.2. Gestão de Palavras
+\subsection{ Gestão de Palavras
 Reservadas}\label{gestuxe3o-de-palavras-reservadas}}
 
 Para evitar que o compilador confunda identificadores (nomes de
@@ -549,7 +548,7 @@ da palavra-chave; caso contrário, classifica-o como um identificador
 (ID).
 
 \hypertarget{expressuxf5es-regulares-e-tokens}{%
-\subsection{2.3. Expressões Regulares e
+\subsection{ Expressões Regulares e
 Tokens}\label{expressuxf5es-regulares-e-tokens}}
 
 Os tokens foram divididos em duas categorias de definição: 1)
@@ -564,7 +563,7 @@ captura texto entre plicas (\textbf{`\ldots{}'}), tratando corretamente
 sequências de caracteres.
 
 \hypertarget{tratamento-de-ruuxeddo-e-erros}{%
-\subsection{2.4. Tratamento de ``Ruído'' e
+\subsection{ Tratamento de ``Ruído'' e
 Erros}\label{tratamento-de-ruuxeddo-e-erros}}
 
 \begin{itemize}
@@ -588,7 +587,7 @@ Erros}\label{tratamento-de-ruuxeddo-e-erros}}
 \end{itemize}
 
     \hypertarget{anuxe1lise-sintuxe1tica-srcparser.py}{%
-\section{3. Análise Sintática
+\section{ Análise Sintática
 (src/parser.py)}\label{anuxe1lise-sintuxe1tica-srcparser.py}}
 
 A análise sintática é a fase onde o compilador verifica se a sequência
@@ -596,7 +595,7 @@ de tokens fornecida pelo analisador léxico respeita as regras
 gramaticais da linguagem Pascal Standard.
 
 \hypertarget{metodologia-e-ferramentas}{%
-\subsection{3.1. Metodologia e
+\subsection{ Metodologia e
 Ferramentas}\label{metodologia-e-ferramentas}}
 
 Utilizámos o \textbf{ply.yacc}, que implementa um algoritmo de análise
@@ -605,7 +604,7 @@ funções Python cujas docstrings contêm as regras de produção na forma de
 \textbf{BNF}.
 
 \hypertarget{estrutura-da-gramuxe1tica}{%
-\subsection{3.2. Estrutura da
+\subsection{ Estrutura da
 Gramática}\label{estrutura-da-gramuxe1tica}}
 
 A gramática foi desenhada para cobrir a estrutura hierárquica do Pascal:
@@ -619,7 +618,7 @@ function, gerindo corretamente a assinatura (parâmetros) e o bloco local
 de cada subprograma.
 
 \hypertarget{tratamento-de-expressuxf5es-e-preceduxeancia}{%
-\subsection{3.3. Tratamento de Expressões e
+\subsection{ Tratamento de Expressões e
 Precedência}\label{tratamento-de-expressuxf5es-e-preceduxeancia}}
 
 Para garantir que operações como \textbf{a + b * c} são calculadas
@@ -629,7 +628,7 @@ ambiguidades gramaticais sem a necessidade de criar múltiplas sub-regras
 complexas para cada operador.
 
 \hypertarget{atributos-sintuxe1ticos-e-auxe7uxf5es}{%
-\subsection{3.4. Atributos Sintáticos e
+\subsection{ Atributos Sintáticos e
 Ações}\label{atributos-sintuxe1ticos-e-auxe7uxf5es}}
 
 Em cada regra gramatical, o analisador executa uma ``ação''. No nosso
@@ -642,7 +641,7 @@ a criação de etiquetas de salto (labels) necessárias para o fluxo de
 execução na Máquina Virtual.
 
 \hypertarget{recuperauxe7uxe3o-de-erros-sintuxe1ticos}{%
-\subsection{3.5. Recuperação de Erros
+\subsection{ Recuperação de Erros
 Sintáticos}\label{recuperauxe7uxe3o-de-erros-sintuxe1ticos}}
 
 Implementámos a função \textbf{p\_error}, que é disparada quando o
@@ -652,7 +651,7 @@ utilizador a linha e o token onde a gramática foi violada, facilitando a
 correção do código-fonte.
 
 \hypertarget{gramuxe1tica}{%
-\subsection{3.6 Gramática}\label{gramuxe1tica}}
+\subsection{ Gramática}\label{gramuxe1tica}}
 
 \begin{verbatim}
 Rule 0     S' -> programa
@@ -771,7 +770,7 @@ Rule 112   primary -> LPAREN expr RPAREN
 \end{verbatim}
 
     \hypertarget{anuxe1lise-semuxe2ntica-e-gestuxe3o-de-contexto-srcsem.py-e-srccontext.py}{%
-\section{4. Análise Semântica e Gestão de Contexto (src/sem.py e
+\section{ Análise Semântica e Gestão de Contexto (src/sem.py e
 src/context.py)}\label{anuxe1lise-semuxe2ntica-e-gestuxe3o-de-contexto-srcsem.py-e-srccontext.py}}
 
 A análise semântica é responsável por verificar se o programa, embora
@@ -779,7 +778,7 @@ sintaticamente correto, faz sentido do ponto de vista da lógica da
 linguagem Pascal.
 
 \hypertarget{tabela-de-suxedmbolos-e-gestuxe3o-de-escopos}{%
-\subsection{4.1. Tabela de Símbolos e Gestão de
+\subsection{ Tabela de Símbolos e Gestão de
 Escopos}\label{tabela-de-suxedmbolos-e-gestuxe3o-de-escopos}}
 
 Utilizámos uma estrutura de Tabela de Símbolos implementada em sem.py,
@@ -794,7 +793,7 @@ do topo (mais local) para a base (global), garantindo que o compilador
 encontra sempre a instância mais próxima de uma variável.
 
 \hypertarget{verificauxe7uxe3o-de-tipos-type-checking}{%
-\subsection{4.2. Verificação de Tipos (Type
+\subsection{ Verificação de Tipos (Type
 Checking)}\label{verificauxe7uxe3o-de-tipos-type-checking}}
 
 O compilador realiza verificações estritas para garantir a integridade
@@ -809,7 +808,7 @@ verifica se o número e os tipos de argumentos passados numa chamada
 correspondem exatamente à assinatura definida na declaração da função.
 
 \hypertarget{gestuxe3o-de-memuxf3ria-e-contexto-context.py}{%
-\subsection{4.3. Gestão de Memória e Contexto
+\subsection{ Gestão de Memória e Contexto
 (context.py)}\label{gestuxe3o-de-memuxf3ria-e-contexto-context.py}}
 
 O ficheiro \textbf{context.py} atua como um repositório central de
@@ -823,7 +822,7 @@ sistema pré-declara funções essenciais (como \textbf{writeln},
 impedindo que o utilizador as redeclare acidentalmente.
 
 \hypertarget{tratamento-de-erros-semuxe2nticos}{%
-\subsection{4.4. Tratamento de Erros
+\subsection{ Tratamento de Erros
 Semânticos}\label{tratamento-de-erros-semuxe2nticos}}
 
 Sempre que uma regra é violada (ex: usar uma variável x que não foi
@@ -833,7 +832,7 @@ utilizador uma mensagem clara com a descrição do problema e a linha onde
 ocorreu.
 
     \hypertarget{gerauxe7uxe3o-de-cuxf3digo-srccodegen.py}{%
-\section{5. Geração de Código
+\section{ Geração de Código
 (src/codegen.py)}\label{gerauxe7uxe3o-de-cuxf3digo-srccodegen.py}}
 
 A geração de código é a fase final (back-end) onde as estruturas
@@ -841,7 +840,7 @@ validadas são convertidas em instruções de baixo nível para a Máquina
 Virtual (VM) de stack.
 
 \hypertarget{modelo-de-execuuxe7uxe3o-baseada-em-stack}{%
-\subsection{5.1. Modelo de Execução baseada em
+\subsection{ Modelo de Execução baseada em
 Stack}\label{modelo-de-execuuxe7uxe3o-baseada-em-stack}}
 
 O código gerado assume uma arquitetura de stack, onde as operações
@@ -855,7 +854,7 @@ gerador emite a instrução \textbf{ITOF} para garantir a coerência dos
 dados na stack.
 
 \hypertarget{mapeamento-de-memuxf3ria-e-endereuxe7amento}{%
-\subsection{5.2. Mapeamento de Memória e
+\subsection{ Mapeamento de Memória e
 Endereçamento}\label{mapeamento-de-memuxf3ria-e-endereuxe7amento}}
 
 A gestão de variáveis é feita distinguindo o seu escopo: -
@@ -867,7 +866,7 @@ com endereços relativos à base da frame atual da stack (FP), geridos
 pelo \textbf{next\_local\_addr\_stack} no \textbf{context.py}.
 
 \hypertarget{implementauxe7uxe3o-de-estruturas-de-controlo}{%
-\subsection{5.3. Implementação de Estruturas de
+\subsection{ Implementação de Estruturas de
 Controlo}\label{implementauxe7uxe3o-de-estruturas-de-controlo}}
 
 Para implementar saltos e ciclos, o módulo codegen.py fornece um gerador
@@ -882,7 +881,7 @@ de incremento/decremento da variável de controlo e a verificação do
 limite.
 
 \hypertarget{chamadas-de-subprogramas-funuxe7uxf5es-e-procedimentos}{%
-\subsection{5.4. Chamadas de Subprogramas (Funções e
+\subsection{ Chamadas de Subprogramas (Funções e
 Procedimentos)}\label{chamadas-de-subprogramas-funuxe7uxf5es-e-procedimentos}}
 
 A geração de código para subprogramas segue um protocolo rigoroso: 1)
@@ -895,7 +894,7 @@ antes de empilhar os argumentos, garantindo que o resultado fica
 disponível para o chamador após o \textbf{POP} dos argumentos.
 
 \hypertarget{strings-e-io}{%
-\subsection{5.5. Strings e I/O}\label{strings-e-io}}
+\subsection{ Strings e I/O}\label{strings-e-io}}
 
 \begin{itemize}
 \tightlist
@@ -910,14 +909,14 @@ disponível para o chamador após o \textbf{POP} dos argumentos.
 \end{itemize}
 
     \hypertarget{testes-e-resultados}{%
-\section{6. Testes e Resultados}\label{testes-e-resultados}}
+\section{ Testes e Resultados}\label{testes-e-resultados}}
 
 A validação do compilador foi realizada através de uma infraestrutura de
 testes automatizada, desenhada para garantir a fiabilidade da geração de
 código e a precisão dos diagnósticos de erro.
 
 \hypertarget{infraestrutura-de-testes-automuxe1tica}{%
-\subsection{6.1. Infraestrutura de Testes
+\subsection{ Infraestrutura de Testes
 Automática}\label{infraestrutura-de-testes-automuxe1tica}}
 
 Afastando-nos de uma abordagem de testes manuais, implementámos o script
@@ -927,7 +926,7 @@ ficheiro \textbf{.pas} e comparando o resultado com as expetativas
 definidas no sistema.
 
 \hypertarget{testes-de-regressuxe3o-casos-de-sucesso}{%
-\subsection{6.2. Testes de Regressão (Casos de
+\subsection{ Testes de Regressão (Casos de
 Sucesso)}\label{testes-de-regressuxe3o-casos-de-sucesso}}
 
 Na pasta \textbf{tests/cases/ok/}, mantemos uma suite de testes que
@@ -944,7 +943,7 @@ de Array e Binário para Inteiro) são compilados e os resultados em
 assembly são validados na VM.
 
 \hypertarget{testes-de-stress-e-diagnuxf3stico-casos-de-erro}{%
-\subsection{6.3. Testes de Stress e Diagnóstico (Casos de
+\subsection{ Testes de Stress e Diagnóstico (Casos de
 Erro)}\label{testes-de-stress-e-diagnuxf3stico-casos-de-erro}}
 
 Um dos pontos fortes deste compilador é a sua capacidade de lidar com
@@ -962,7 +961,7 @@ não resultam em boolean (ex: \textbf{T11.pas}, \textbf{T19.pas}). -
 argumentos incorretos (ex: \textbf{T28.pas}, \textbf{T29.pas}).
 
 \hypertarget{anuxe1lise-de-resultados}{%
-\subsection{6.4. Análise de Resultados}\label{anuxe1lise-de-resultados}}
+\subsection{ Análise de Resultados}\label{anuxe1lise-de-resultados}}
 
 O sucesso na execução da suite completa de testes demonstra que o
 compilador possui: 1) \textbf{Estabilidade:} Alterações em módulos (como
@@ -974,7 +973,7 @@ stack discipline e os limites de memória definidos pela arquitetura de
 destino.
 
     \hypertarget{conclusuxe3o-e-dificuldades-superadas}{%
-\section{7. Conclusão e Dificuldades
+\section{ Conclusão e Dificuldades
 Superadas}\label{conclusuxe3o-e-dificuldades-superadas}}
 
 O desenvolvimento deste compilador para Pascal Standard representou um
@@ -983,7 +982,7 @@ conceitos teóricos de linguagens formais com soluções práticas de
 engenharia de software.
 
 \hypertarget{suxedntese-do-trabalho-realizado}{%
-\subsection{7.1. Síntese do Trabalho
+\subsection{ Síntese do Trabalho
 Realizado}\label{suxedntese-do-trabalho-realizado}}
 
 Conseguimos implementar um sistema funcional que cobre desde a análise
@@ -995,7 +994,7 @@ a subprogramas e tipos estruturados como \textbf{array} (Ver:
 \textbf{src/compiler.py}).
 
 \hypertarget{dificuldades-e-soluuxe7uxf5es-tuxe9cnicas}{%
-\subsection{7.2. Dificuldades e Soluções
+\subsection{ Dificuldades e Soluções
 Técnicas}\label{dificuldades-e-soluuxe7uxf5es-tuxe9cnicas}}
 
 Durante o desenvolvimento, enfrentámos desafios complexos que exigiram
@@ -1016,7 +1015,7 @@ mecanismo de proteção na Tabela de Símbolos que bloqueia qualquer
 tentativa de shadowing de nomes built-in (Ver: \textbf{src/sem.py}).
 
 \hypertarget{melhorias}{%
-\subsection{7.3. Melhorias}\label{melhorias}}
+\subsection{ Melhorias}\label{melhorias}}
 
 Embora o compilador esteja totalmente funcional, a arquitetura modular
 adotada permite futuras expansões, tais como: - \textbf{Otimização de
