@@ -1,0 +1,114 @@
+[
+  {
+    "file": "T1.pas",
+    "contains": "Variável 'x' usada sem ter sido declarada"
+  },
+  {
+    "file": "T2.pas",
+    "contains": "já declarado"
+  },
+  {
+    "file": "T3.pas",
+    "contains": "Range inválido"
+  },
+  {
+    "file": "T4.pas",
+    "contains": "Índice"
+  },
+  {
+    "file": "T5.pas",
+    "contains": "fora do range"
+  },
+  {
+    "file": "T6.pas",
+    "contains": "não é array nem string"
+  },
+  {
+    "file": "T7.pas",
+    "contains": "falta índice"
+  },
+  {
+    "file": "T8.pas",
+    "contains": "Atribuição incompatível"
+  },
+  {
+    "file": "T9.pas",
+    "contains": "Atribuição incompatível"
+  },
+  {
+    "file": "T11.pas",
+    "contains": "IF exige condição boolean"
+  },
+  {
+    "file": "T14.pas",
+    "contains": "AND exige boolean"
+  },
+  {
+    "file": "T18.pas",
+    "contains": "Operador 'div' exige integer"
+  },
+  {
+    "file": "T19.pas",
+    "contains": "Operador 'mod' exige integer"
+  },
+  {
+    "file": "T21.pas",
+    "contains": "Comparação inválida"
+  },
+  {
+    "file": "T22.pas",
+    "contains": "Variável de controlo do FOR"
+  },
+  {
+    "file": "T23.pas",
+    "contains": "Início do FOR"
+  },
+  {
+    "file": "T25.pas",
+    "contains": "variável de controlo do FOR"
+  },
+  {
+    "file": "T26.pas",
+    "contains": "não pode ser chamada como statement"
+  },
+  {
+    "file": "T28.pas",
+    "contains": "espera 2 args"
+  },
+  {
+    "file": "T29.pas",
+    "contains": "incompatível"
+  },
+  {
+    "file": "T30.pas",
+    "contains": "Chamada inválida"
+  },
+  {
+    "file": "T31.pas",
+    "contains": "WRITELN não aceita arrays"
+  },
+  {
+    "file": "T32.pas",
+    "contains": "READLN não pode ler para um array inteiro"
+  },
+  {
+    "file": "T33.pas",
+    "contains": "não atribui valor de retorno"
+  },
+  {
+    "file": "T42.pas",
+    "contains": "reservado (builtin)"
+  },
+  {
+    "file": "T43.pas",
+    "contains": "reservado (builtin)"
+  },
+  {
+    "file": "T45.pas",
+    "contains": "Função builtin 'length' não pode ser chamada como statement"
+  },
+  {
+    "file": "T46.pas",
+    "contains": "strings são read-only"
+  }
+]
